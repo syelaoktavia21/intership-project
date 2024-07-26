@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Surat Rujukan</title>
+</head>
+<body>
+    <center><h1>Surat Rujukan</h1></center>
+    <p>Melalui surat rujukan ini kami menyatakan bahwa pasien di bawah ini:</p>
+    <p>NIK: {{ patient.nik }}</p>
+    <p>Nama: {{ patient.nama }}</p>
+    <p>Tanggal Lahir: {{ patient.tanggal_lahir }}</p>
+    <p>Jenis Kelamin: {{ patient.jenis_kelamin }}</p>
+    <p>Alamat: {{ patient.alamat }}</p>
+    <p>No Telepon: {{ patient.no_hp }}</p>
+    <p>Status Triase: {{ patient.status_triase }}</p>
+    <p>Tanggal Pendaftaran: {{ patient.tanggal_pendaftaran }}</p>
+    <p>Tujuan Rujukan: {{ patient.tujuan_rujukan }}</p>
+    <p>memerlukan tindakan lanjutan dari rumah sakit yang dituju.</p>
+    <p>Salam Kami,</p>
+    <br><br>
+    <p>Klinik Ibnu Abbas</p>
+
+    <!-- Button to trigger the PDF generation -->
+    <form action="/surat_rujukan/{{ patient.id }}" method="get">
+        <button type="submit">Cetak PDF</button>
+    </form>
+</body>
+</html>
